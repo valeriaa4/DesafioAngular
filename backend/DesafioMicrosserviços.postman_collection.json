@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "0f4090d7-2550-48b6-b0d7-9579204577a1",
+		"name": "Desafio Microsserviços",
+		"description": "Documentação Postman referente ao sistema de Cadastro de Pets, Agendamento de Cuidados e Notificações.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40987446"
+	},
+	"item": [
+		{
+			"name": "Cadastro Pets",
+			"item": [
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tutor\": \"\",\r\n  \"emailTutor\": \"\",\r\n  \"nome\": \"\",\r\n  \"especie\": \"\",\r\n  \"raca\": \"\",\r\n  \"idade\": ,\r\n  \"peso\": ,\r\n  \"cor\": \"\",\r\n  \"descricao\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pets/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtro por Raça",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pets/filtro-raca?raca=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets",
+								"filtro-raca"
+							],
+							"query": [
+								{
+									"key": "raca",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtro por Espécie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pets/filtro-especie?especie=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets",
+								"filtro-especie"
+							],
+							"query": [
+								{
+									"key": "especie",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": ,\r\n  \"tutor\": \"\",\r\n  \"emailTutor\": \"\",\r\n  \"nome\": \"\",\r\n  \"especie\": \"\",\r\n  \"raca\": \"\",\r\n  \"idade\": ,\r\n  \"peso\": ,\r\n  \"cor\": \"\",\r\n  \"descricao\": \"\",\r\n  \"imagem\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pets/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "The Dog/Cat API",
+			"item": [
+				{
+					"name": "Dog - Listar Raças",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pets/dog-api-racas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets",
+								"dog-api-racas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dog - Imagem por Raça",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pets/dog-api-imagens?raca=1&api_key=live_2TOzjmriwyVn2JTUGp9w54BgN25kxZ1bjGBzV8rqtn3NTXGwkHkR4neFuJLbrsoC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets",
+								"dog-api-imagens"
+							],
+							"query": [
+								{
+									"key": "raca",
+									"value": "1"
+								},
+								{
+									"key": "api_key",
+									"value": "live_2TOzjmriwyVn2JTUGp9w54BgN25kxZ1bjGBzV8rqtn3NTXGwkHkR4neFuJLbrsoC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cat - Listar Raças",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pets/cat-api-racas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets",
+								"cat-api-racas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cat - Imagem por Raça",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pets/cat-api-imagens?raca=beng&api_key=live_KvCSlFz8kQoJyhOwZnKwD1CBvsz63flQAyKsZOsVV247EC56aEWgBsZQSC8APrA4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pets",
+								"cat-api-imagens"
+							],
+							"query": [
+								{
+									"key": "raca",
+									"value": "beng"
+								},
+								{
+									"key": "api_key",
+									"value": "live_KvCSlFz8kQoJyhOwZnKwD1CBvsz63flQAyKsZOsVV247EC56aEWgBsZQSC8APrA4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agendamentos",
+			"item": [
+				{
+					"name": "Listar Agendamentos Automáticos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/automatico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"automatico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Agendamentos Manuais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento/manual",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento",
+								"manual"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Agendamento Manual",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPet\": ,\r\n    \"data\": \"\",\r\n    \"horario\": \"\",\r\n    \"cuidado\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agendamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Agendamento Manual",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Agendamento Manual",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agendamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agendamento"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

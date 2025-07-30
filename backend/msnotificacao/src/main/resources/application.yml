@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: msnotificacao
+  datasource:
+    url: jdbc:mysql://localhost:3306/pets
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: santosvaleriav4@gmail.com
+    password: advg xrvj cxto qfkv
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: 8083
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaadmin:eurekaadmin@localhost:8761/eureka
+
+mq:
+  queues:
+    appointment-created: appointment-created
+

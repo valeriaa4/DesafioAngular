@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: mscadastropets
+  datasource:
+    url: jdbc:mysql://localhost:3306/pets
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaadmin:eurekaadmin@localhost:8761/eureka
+
+mq:
+  queues:
+    pet-created: pet-created
+
+external:
+  api:
+    key-dog: live_2TOzjmriwyVn2JTUGp9w54BgN25kxZ1bjGBzV8rqtn3NTXGwkHkR4neFuJLbrsoC
+    key-cat: live_KvCSlFz8kQoJyhOwZnKwD1CBvsz63flQAyKsZOsVV247EC56aEWgBsZQSC8APrA4

@@ -1,0 +1,43 @@
+// global styles
+@use '@angular/material' as mat;
+@include mat.core();
+
+$custom-app-primary: mat.m2-define-palette(mat.$m2-teal-palette, 900);
+$custom-app-secondary: mat.m2-define-palette(mat.$m2-teal-palette, 900);
+$custom-app-warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+$custom-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $custom-app-primary,
+    accent: $custom-app-secondary,
+    warn: $custom-app-warn,
+  )
+  ));
+
+html {
+    @include mat.theme((
+      typography: (
+        plain-family: Quicksand,
+        bold-weight: 900,
+        medium-weight: 500,
+        regular-weight: 300,
+      ),
+      density: 0,
+    ));
+  }
+
+@include mat.core-theme($custom-theme);
+
+@include mat.all-component-themes($custom-theme);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #dcebce;
+    height: 100vh;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

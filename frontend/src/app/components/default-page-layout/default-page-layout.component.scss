@@ -1,0 +1,31 @@
+@use '../../../styles/variables.scss' as *;
+
+h1 {
+    color: $primary-color;
+    font-size: 20px;
+    font-family: $standart-font, $secundary-font;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 30px;
+}
+
+button {
+    background-color: $primary-color;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: $standart-font, $secundary-font;
+    font-weight: 300;
+    border-radius: 15px;
+    border: $primary-color;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.button-submit {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

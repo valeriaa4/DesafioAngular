@@ -1,0 +1,17 @@
+@use '../../../styles/variables.scss' as *;
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    font-family: $standart-font;
+}
+
+mat-form-field {
+    width: 25%;
+    
+    @media(max-width: 999px) {
+        width: 250px;
+    }
+}

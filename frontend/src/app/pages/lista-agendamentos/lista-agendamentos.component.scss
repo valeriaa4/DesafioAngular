@@ -1,0 +1,128 @@
+@use '../../../styles/variables.scss' as *;
+
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $standart-font;
+  font-size: 15px;
+
+  @media (max-width: 999px) {
+    font-size: 14px;
+  }
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+
+  @media (max-width: 999px) {
+    padding: 8px 5px;
+    min-width: 60px;
+  }
+}
+
+td img {
+    cursor: pointer;
+
+    @media (max-width: 999px) {
+      width: 18px;
+    }
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+
+  @media (max-width: 999px) {
+    font-size: 13px;
+  }
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.tabela {
+    margin: 30px;
+
+    @media (max-width: 999px) {
+      margin: 15px 10px;
+    }
+}
+
+h3 {
+    font-family: $standart-font;
+    font-size: 18px;
+    padding-bottom: 10px;
+
+    @media (max-width: 999px) {
+      font-size: 16px;
+    }
+}
+
+.botao-voltar {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+
+    @media (max-width: 999px) {
+      justify-content: center;
+      padding: 20px 0;
+    }
+}
+
+.content-info {
+    display: inline-flex;
+    justify-content: end;
+    align-items: end;
+    gap: 870px;
+    padding-bottom: 15px;
+
+    @media (max-width: 999px) {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+}
+
+.titulo {
+    padding-bottom: 15px;
+}
+
+.botao {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+@media (max-width: 999px) {
+  .table-container {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  app-header {
+    display: none;
+  }
+  
+  table {
+    min-width: 600px;
+  }
+  
+  app-botao {
+    width: 100%;
+    
+    button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="card">
+    <img [src]="imagem" alt="Imagem do Card" class="card-image">
+    <div class="card-content">
+        <h2 class="card-title">{{ nome +" | "+ raca }}</h2>
+        <p class="card-description">{{"Tutor: "+ tutor}}</p>
+        <p class="card-description">{{"Email: "+ emailTutor}}</p>
+
+    </div>
+    <section>
+        <div class="example-button-row">
+        <button mat-raised-button (click)="detalhes(id)">{{ botaotxt }}</button>
+        </div>
+    </section>
+</div>

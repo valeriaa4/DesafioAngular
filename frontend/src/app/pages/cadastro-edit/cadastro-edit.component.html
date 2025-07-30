@@ -1,0 +1,83 @@
+
+<form *ngIf="!carregando && !errorMessage" [formGroup]="cadastroEditForm" (ngSubmit)="salvar()" class="form-container">
+<h1>ATUALIZAÇÃO DE PET</h1>
+<p>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>ID</mat-label>
+      <input matInput type="number" formControlName="id">
+      <mat-icon matSuffix>tag</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Tutor</mat-label>
+      <input matInput type="text" formControlName="tutor" placeholder="Nome do tutor" required>
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+<p>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="emailTutor" placeholder="Email do tutor" required>
+      <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Nome do Pet</mat-label>
+      <input matInput type="text" formControlName="nome" placeholder="Nome do pet" required>
+      <mat-icon matSuffix>pets</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Raça</mat-label>
+      <input matInput type="text" formControlName="raca" placeholder="Raça do pet" required>
+      <mat-icon matSuffix>straighten</mat-icon>
+    </mat-form-field>
+</p>
+  
+<p>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Idade (meses)</mat-label>
+      <input matInput type="number" formControlName="idade" placeholder="Idade em meses" required min="1">
+      <mat-icon matSuffix>cake</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Cor</mat-label>
+      <input matInput type="text" formControlName="cor" placeholder="Cor do pet" required>
+      <mat-icon matSuffix>palette</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Peso (kg)</mat-label>
+      <input matInput type="number" formControlName="peso" placeholder="Peso em kg" required step="0.1" min="0.1">
+      <mat-icon matSuffix>fitness_center</mat-icon>
+    </mat-form-field>
+
+<p> 
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Espécie</mat-label>
+      <mat-select formControlName="especie" required>
+        <mat-option value="Cachorro">Cachorro</mat-option>
+        <mat-option value="Gato">Gato</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput formControlName="descricao" placeholder="Descrição do pet" required maxlength="200" rows="1"></textarea>
+      <mat-hint align="end">{{cadastroEditForm.get('descricao')?.value?.length || 0}}/200</mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>URL da Imagem</mat-label>
+      <input matInput type="text" formControlName="imagem" placeholder="URL da imagem do pet" required>
+      <mat-icon matSuffix>image</mat-icon>
+    </mat-form-field>
+</p>
+
+  <div class="botao-acoes">
+    <app-botao type="submit" botaotxt="SALVAR" (click)="salvar()"></app-botao>
+    <app-botao type="button" (click)="voltar()" botaotxt="CANCELAR" class="cancel-button"></app-botao>
+  </div>
+</form>

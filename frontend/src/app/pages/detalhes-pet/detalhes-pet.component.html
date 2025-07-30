@@ -1,0 +1,65 @@
+<app-header></app-header>
+<div *ngIf="isLoading" class="loading">
+    <p>Carregando informações do pet...</p>
+  </div>
+  
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+    <button (click)="voltar()" class="btn btn-back">Voltar</button>
+  </div>
+  
+  <div *ngIf="!isLoading && !errorMessage && cadastros" class="pet-detalhes-container">
+    <div class="detalhes-header">
+      <h1>Pet - {{ cadastros.nome }} | Código - {{cadastros.id}}</h1>
+    </div>
+  
+    <div class="detalhes-content">
+      <div class="pet-imagem">
+        <img [src]="cadastros.imagem" [alt]="cadastros.nome">
+      </div>
+
+        <div class="pet-detalhes">
+          <div class="detalhe-item">
+            <h4 class="nome-content">Ficha de Cadastro</h4>
+            <span class="detalhe-label">Tutor: </span>
+            <span>{{ cadastros.tutor }}</span>
+          </div>
+          <div class="detalhe-item">
+            <span class="detalhe-label">Email: </span>
+            <span>{{ cadastros.emailTutor }}</span>
+          </div>
+          <div class="detalhe-item">
+            <span class="detalhe-label">Espécie: </span>
+            <span>{{ cadastros.especie }}</span>
+          </div>
+          <div class="detalhe-item">
+            <span class="detalhe-label">Raça: </span>
+            <span>{{ cadastros.raca }}</span>
+          </div>
+          <div class="detalhe-item">
+            <span class="detalhe-label">Idade: </span>
+            <span>{{ cadastros.idade }} (meses)</span>
+          </div>
+          <div class="detalhe-item">
+            <span class="detalhe-label">Peso: </span>
+            <span>{{ cadastros.peso }} kg</span>
+          </div>
+          <div class="detalhe-item">
+            <span class="detalhe-label">Cor: </span>
+            <span>{{ cadastros.cor }}</span>
+          </div>
+          <div class="detalhe-item">
+            <span class="detalhe-label">Descrição: </span>
+            <span>{{ cadastros.descricao }}</span>
+          </div>
+        </div>
+      </div>    
+      <div class="botao-acoes">
+        <app-botao (click)="alterar()" botaotxt="ATUALIZAR"></app-botao>
+        <app-botao (click)="deletar(cadastros.id)" botaotxt="EXCLUIR"></app-botao>
+      </div>
+    </div>
+
+    <div class="botao-voltar">
+      <app-botao (click)="voltar()" botaotxt="VOLTAR"></app-botao>
+    </div>

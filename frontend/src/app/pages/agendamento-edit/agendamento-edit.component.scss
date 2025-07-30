@@ -1,0 +1,57 @@
+@use '../../../styles/variables.scss' as *;
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    font-family: $standart-font;
+    padding-top: 20px;
+
+    @media (max-width: 999px) {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+mat-form-field {
+    width: 25%;
+
+    @media (max-width: 999px) {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+mat-icon {
+    color: #2c423f;
+}
+
+mat-label, mat-form-field, mat-option, mat-select {
+    font-family: $standart-font;
+}
+
+.selecao {
+    padding: 9px;
+    padding-bottom: 18px;
+}
+
+.botao-acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+h1 {
+    color: $primary-color;
+    font-size: 20px;
+    font-family: $standart-font, $secundary-font;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 15px;
+}

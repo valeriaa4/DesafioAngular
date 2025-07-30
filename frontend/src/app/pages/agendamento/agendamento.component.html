@@ -1,0 +1,52 @@
+<app-default-page-layout  titulo="AGENDAMENTO DE CUIDADOS" botaotxt="AGENDAR" (submit)="submit()">
+    <form [formGroup]="agendamentoForm">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>ID do Pet</mat-label>
+                <mat-select formControlName="idPet" >
+                    <mat-option value="{{cadastros.id}}" *ngFor="let cadastros of cadastros$ | async">{{ cadastros.id }} - {{ cadastros.nome }} - Tutor: {{cadastros.tutor}} </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Data</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="data" matInput required placeholder="MM/DD/YYYY">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Horário</mat-label>
+                <mat-select formControlName="horario">
+                    <mat-option value="08:00">08:00</mat-option>
+                    <mat-option value="09:00">09:00</mat-option>
+                    <mat-option value="10:00">10:00</mat-option>
+                    <mat-option value="11:00">11:00</mat-option>
+                    <mat-option value="12:00">12:00</mat-option>
+                    <mat-option value="13:00">13:00</mat-option>
+                    <mat-option value="14:00">14:00</mat-option>
+                    <mat-option value="15:00">15:00</mat-option>
+                    <mat-option value="16:00">16:00</mat-option>
+                    <mat-option value="17:00">17:00</mat-option>          
+                </mat-select>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Cuidado</mat-label>
+                <mat-select formControlName="cuidado">
+                    <mat-option value="Banho e Tosa">Banho e Tosa</mat-option>
+                    <mat-option value="Administração de Medicamentos">Administração de Medicamentos</mat-option>
+                    <mat-option value="Consulta Veterinária">Consulta Veterinária</mat-option>
+                    <mat-option value="Vacinação">Vacinação</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p>
+    </form>
+
+</app-default-page-layout>
+

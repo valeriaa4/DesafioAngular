@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="card-container">
+    <app-card
+      *ngFor="let cadastros of cadastros$ | async"
+      [imagem]="cadastros.imagem"
+      [nome]="cadastros.nome"
+      [descricao]="cadastros.descricao"
+      [tutor]="cadastros.tutor"
+      [raca]="cadastros.raca"
+      [especie]="cadastros.especie"
+      [peso]="cadastros.peso"
+      [idade]="cadastros.idade"
+      [id]="cadastros.id"
+      [emailTutor]="cadastros.emailTutor"
+      [cor]="cadastros.cor"
+      botaotxt="Read More"
+      (click)="detalhes(cadastros.id)">
+  </app-card>
+</div>
+<div class="botao-voltar">
+  <app-botao botaotxt="VOLTAR" (click)="voltar()"></app-botao>
+</div>

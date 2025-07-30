@@ -1,0 +1,44 @@
+@use '../../../styles/variables.scss' as *;
+
+main {
+    background: url("/bg.png") no-repeat center center;
+    background-color: $bg-color;
+    background-size: cover;
+    height: 89.8vh;
+}
+
+button {
+    background-color: $primary-color;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: $standart-font, $secundary-font;
+    border-radius: 20px;
+    border: $primary-color;
+    padding: 15px;
+    width: 210px;
+    height: 50px;
+    flex: 1 1 calc(50% - 40px); 
+    cursor: pointer;
+}
+
+.container-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 40px;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 35px;
+}
+
+@media(max-width: 999px){
+    .container-buttons, button {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin-bottom: 12px;
+        max-width: 220px;
+        padding: 20px;
+    }
+}

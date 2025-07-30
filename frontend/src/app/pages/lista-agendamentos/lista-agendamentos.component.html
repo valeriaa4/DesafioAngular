@@ -1,0 +1,64 @@
+<app-header></app-header>
+  <div class="tabela">
+    <app-botao class="botao" (click)="goNotificacoes()" botaotxt="NOTIFICAÇÕES"></app-botao>  
+    <div class="titulo">
+          <h3>Agendamentos Manuais</h3>
+           
+    </div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Código Pet </th>
+            <th>Tutor</th>
+            <th>Email</th>
+            <th>Cuidado</th>
+            <th>Data</th>
+            <th>Horário</th>
+            <th>Atualizar</th>
+            <th>Excluir</th>
+        </tr>
+        <tr *ngFor="let agendamentos of agendamentos$ | async">
+            <td>{{agendamentos.id}}</td>
+            <td>{{agendamentos.idPet}}</td>
+            <td>{{agendamentos.nomeTutor}}</td>
+            <td>{{agendamentos.emailTutor}}</td>
+            <td>{{agendamentos.cuidado}}</td>
+            <td>{{agendamentos.data}}</td>
+            <td>{{agendamentos.horario}}</td>
+            <td (click)="alterar(agendamentos.id)"><img src="editar-icon.png" alt="icon de edição" width=21></td>  
+            <td (click)="deletar(agendamentos.id)"><img src="deletar-icon.png" alt="icon de exclusão" width=22></td>    
+        </tr>
+    </table>
+  </div>
+
+  <div class="tabela">
+    <div class="titulo">
+        <h3>Agendamentos Automáticos</h3>
+    </div>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Código Pet</th>
+            <th>Tutor</th>
+            <th>Email</th>
+            <th>Cuidado</th>
+            <th>Data</th>
+            <th>Excluir</th>
+        </tr>
+        <tr *ngFor="let agendamentosauto of agendamentosauto$ | async">
+            <td>{{agendamentosauto.id}}</td>
+            <td>{{agendamentosauto.idPet}}</td>
+            <td>{{agendamentosauto.nomeTutor}}</td>
+            <td>{{agendamentosauto.emailTutor}}</td>
+            <td>{{agendamentosauto.cuidado}}</td>
+            <td>{{agendamentosauto.data}}</td>
+            <td (click)="deletarAuto(agendamentosauto.id)"><img src="deletar-icon.png" alt="icon de exclusão" width=22></td>    
+        </tr>
+    </table>
+  </div>
+
+  <div class="botao-voltar">
+    <app-botao (click)="voltar()" botaotxt="VOLTAR"></app-botao>
+  </div>
+  

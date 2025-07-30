@@ -1,0 +1,30 @@
+<div class="tabela">
+    <h3>Notificações Enviadas</h3> 
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Código Pet </th>
+            <th>emailFrom</th>
+            <th>emailTutor</th>
+            <th>Assunto</th>
+            <th>Texto</th>
+            <th>Data de Envio</th>
+            <th>Status</th>
+        </tr>
+        <tr *ngFor="let notificacoes of notificacoes$ | async">
+            <td>{{notificacoes.idNotif}}</td>
+            <td>{{notificacoes.idPet}}</td>
+            <td>{{notificacoes.emailFrom}}</td>
+            <td>{{notificacoes.emailTutor}}</td>
+            <td>{{notificacoes.assunto}}</td>
+            <td>{{notificacoes.texto}}</td>
+            <td>{{notificacoes.dataEnvioEmail}}</td> 
+            <td>{{notificacoes.statusEmail}}</td> 
+        </tr>
+    </table>
+  </div>
+
+  <div class="botao-voltar">
+    <app-botao botaotxt="VOLTAR" (click)="voltar()"></app-botao>
+  </div>
+  

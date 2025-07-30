@@ -1,0 +1,66 @@
+@use '../../../styles/variables.scss' as *;
+
+.detalhes-content, .detalhes-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding-top: 35px;
+    font-family: $standart-font, $secundary-font;
+    color: $primary-color;
+}
+
+.detalhes-header {
+    padding-top: 25px;
+}
+
+.pet-imagem img {
+    border-radius: 15px;
+    width: 350px;
+    padding: 0px; 
+}
+
+.pet-detalhes {
+    font-size: 16px;
+}
+
+.detalhes-content {
+    gap: 30px;
+}
+
+.botao-voltar {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-top: 30px;
+    padding-right: 40px;
+}
+
+.botao-acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.detalhe-item {
+    padding: 3px;
+}
+
+.nome-content {
+    padding-bottom: 8px;
+}
+
+@media (max-width: 999px) {
+
+    .pet-imagem img{
+        width: 170px;
+    }
+
+    .detalhes-content, .pet-imagem img {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    }
+}

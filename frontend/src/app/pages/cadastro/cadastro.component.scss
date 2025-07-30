@@ -1,0 +1,61 @@
+@use '../../../styles/variables.scss' as *;
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    font-family: $standart-font;
+
+    @media (max-width: 999px) {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+mat-form-field {
+    width: 25%;
+
+    @media (max-width: 999px) {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+mat-icon {
+    color: #2c423f;
+}
+
+mat-label, mat-form-field, mat-option, mat-select {
+    font-family: $standart-font;
+}
+
+.selecao {
+    padding: 9px;
+    padding-bottom: 18px;
+
+    @media (max-width: 999px) {
+        padding: 5px 0;
+    }
+}
+
+.especie {
+    @media(max-width: 999px) {
+        width: 250px;
+    }
+}
+
+.submit, .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 999px) {
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

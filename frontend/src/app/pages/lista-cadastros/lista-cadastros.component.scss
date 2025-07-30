@@ -1,0 +1,23 @@
+@use '../../../styles/variables.scss' as *;
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p {    
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    margin-bottom: -15px; 
+}
+
+.botao-voltar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}

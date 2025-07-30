@@ -1,0 +1,72 @@
+<app-default-page-layout titulo="CADASTRO DE PET" botaotxt="ENVIAR" (submit)="submit()">
+    <form [formGroup]="cadastroForm">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Tutor</mat-label>
+                <input mdInput type="text" formControlName="tutor" matInput placeholder="Digite seu nome">
+                <mat-icon matSuffix>perm_identity</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input mdInput type="email" formControlName="emailTutor" matInput placeholder="Digite seu email">
+                <mat-icon matSuffix>mail_outline</mat-icon>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Nome</mat-label>
+                <input mdInput type="text" formControlName="nome" matInput placeholder="Digite o nome do pet">
+                <mat-icon matSuffix>pets</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Raça</mat-label>
+                <input mdInput type="text" formControlName="raca" matInput placeholder="Digite a raça do pet">
+                <mat-icon matSuffix>star</mat-icon>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Idade (Meses)</mat-label>
+                <input mdInput type="number" formControlName="idade" matInput placeholder="Digite a idade do pet"
+                    matInput min="1" matInput required>
+                <mat-icon matSuffix>looks_one</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Cor</mat-label>
+                <input mdInput type="text" formControlName="cor" matInput placeholder="Digite a cor do pet">
+                <mat-icon matSuffix>color_lens</mat-icon>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Peso (Kg)</mat-label>
+                <input mdInput type="number" formControlName="peso" matInput placeholder="Digite o peso do pet" matInput
+                    min="1" matInput required>
+                <mat-icon matSuffix>fitness_center</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Descrição</mat-label>
+                <input mdInput type="text" formControlName="descricao" matInput placeholder="Digite uma breve descrição"
+                    matInput maxlength="25">
+                <mat-icon matSuffix>short_text</mat-icon>
+            </mat-form-field>
+        </p>
+
+        <p class="especie">
+            <mat-form-field appearance="outline">
+                <mat-label>Espécie</mat-label>
+                <mat-select formControlName="especie">
+                    <mat-option value="Cachorro">Cachorro</mat-option>
+                    <mat-option value="Gato">Gato</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p>
+    </form>
+</app-default-page-layout>

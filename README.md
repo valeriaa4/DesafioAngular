@@ -1,5 +1,5 @@
-<p style="text-align: center"><img src="./frontend/public/logo.png"></p>
-<h2 style="text-align: center">DevPet - Desenvolvendo seu Pet com os melhores cuidados!</h2>
+<p align="center"><img src="./frontend/public/logo.png"></p>
+<h2 align="center">DevPet - Desenvolvendo seu Pet com os melhores cuidados!</h2>
 
 <p style="text-align: justify">
 O <b>DevPet</b> é um sistema desenvolvido com objetivo de gerenciar pets e os cuidados necessários para o desenvolvimento do seu melhor amigo. Ele possibilita realizar o cadastro de pets e o agendamento de cuidados, enviando notificações via email para seus tutores.
@@ -17,7 +17,7 @@ O <b>DevPet</b> é um sistema desenvolvido com objetivo de gerenciar pets e os c
 <p style="text-align: justify">
 🏠 <b>Home: </b> Página principal que introduz os serviços oferecidos, contendo botões para realização de cada ação.
 </p>
-<p style="text-align: center"><i>Tela Inicial</i><img src="./frontend/public/tela_inicial.jpg"></p>
+<p align="center"><i>Tela Inicial</i><img src="./frontend/public/tela_inicial.jpg"></p>
 
 <p style="text-align: justify">
 🐶 <b>Cadastro: </b> Página com formulário para realização de cadastro do Pet.
@@ -27,18 +27,18 @@ O <b>DevPet</b> é um sistema desenvolvido com objetivo de gerenciar pets e os c
 <p style="text-align: justify">
 🕗 <b>Agendamento: </b> Página com formulário para realização de agendamento de cuidado.
 </p>
-<p style="text-align: center"><i>Tela de Agendamento</i><img src="./frontend/public/tela_agendamento.jpg"></p>
+<p align="center"><i>Tela de Agendamento</i><img src="./frontend/public/tela_agendamento.jpg"></p>
 
 <p style="text-align: justify">
 🐱 <b>Acesso Cadastros: </b> Página que apresenta todos os pets cadastrados, permitindo ver mais detalhes do pet, além da possibilidade de alterar ou excluir um cadastro.
 </p>
-<p style="text-align: center"><i>Tela de Listagem de Pets</i><img src="./frontend/public/tela_listagem_pets.jpg"></p>
-<p style="text-align: center"><i>Tela de Detalhes do Pet</i><img src="./frontend/public/tela_detalhes.jpg"></p>
+<p align="center"><i>Tela de Listagem de Pets</i><img src="./frontend/public/tela_listagem_pets.jpg"></p>
+<p align="center"><i>Tela de Detalhes do Pet</i><img src="./frontend/public/tela_detalhes.jpg"></p>
 
 <p style="text-align: justify">
 📑 <b>Acesso Agendamentos: </b> Página que apresenta todos os agendamentos realizados, permitindo alterar ou excluir um agendamento. Além disso, a página também introduz um botão de "notificações", que permite visualizar as notificações enviadas aos tutores via email.
 </p>
-<p style="text-align: center"><i>Tela de Listagem de Agendamentos</i><img src="./frontend/public/tela_listagem_agendamentos.jpg"></p>
+<p align="center"><i>Tela de Listagem de Agendamentos</i><img src="./frontend/public/tela_listagem_agendamentos.jpg"></p>
 
 <h2 id="api">Integração com API</h2>
 
